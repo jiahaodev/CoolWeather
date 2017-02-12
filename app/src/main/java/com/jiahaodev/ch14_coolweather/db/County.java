@@ -12,7 +12,7 @@ public class County extends DataSupport {
     private int id;
     private String countyName;
     private String weatherCode;//表示当前区（县）所对应的天气id（网络）
-    private int cityId; //表示当前区（县）所属市的id值（数据库）
+    private int cityId; //表示当前区（县）所属市的id值（ 数据库 ）
 
     public int getId() {
         return id;

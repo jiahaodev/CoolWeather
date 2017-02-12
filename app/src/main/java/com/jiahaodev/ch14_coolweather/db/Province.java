@@ -9,7 +9,7 @@ import org.litepal.crud.DataSupport;
 
 public class Province extends DataSupport {
 
-    private int id;    //数据库自增长id
+    private int id;    //数据库自增长 id
     private String provinceName;
     private int provinceCode;//网络json信息中的id
 
