@@ -12,7 +12,7 @@ public class City extends DataSupport {
     private int id;//数据库
     private String cityName;
     private int cityCode;//网络版
-    private int provinceId; //表示当前市所属省的id值( 数据库中 )
+    private int provinceId; //表示当前市所属省的id值(数据库中)
 
     public int getId() {
         return id;
