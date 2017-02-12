@@ -1,5 +1,6 @@
 package com.jiahaodev.ch14_coolweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.jiahaodev.ch14_coolweather.gson.Forecast;
 import com.jiahaodev.ch14_coolweather.gson.Weather;
+import com.jiahaodev.ch14_coolweather.service.AutoUpdateService;
 import com.jiahaodev.ch14_coolweather.util.HttpUtil;
 import com.jiahaodev.ch14_coolweather.util.Utility;
 
@@ -244,6 +246,10 @@ public class WeatherActivity extends AppCompatActivity {
 
         //UI信息设置完成，恢复ScrollView的可见性
         weatherLayout.setVisibility(View.VISIBLE);
+
+        //启动定时更新服务
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
 
 
     }
